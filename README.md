@@ -1,7 +1,5 @@
 # Check list SEO ![Build](https://travis-ci.org/itarverne/checklist-seo.svg?branch=master) 
 
-[![PyPI version](https://badge.fury.io/py/Checklist-Seo.svg)](https://badge.fury.io/py/Checklist-Seo)
-
 ![](./static/images/seo_logo.png)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/1ea9094958cb77a0c1a9/maintainability)](https://codeclimate.com/github/itarverne/checklist-seo/maintainability)
@@ -16,6 +14,12 @@
 - Number internal Links 
 
 # Installation
+
+## Pypi
+
+[![PyPI version](https://badge.fury.io/py/Checklist-Seo.svg)](https://badge.fury.io/py/Checklist-Seo)
+
+`pip install Checklist-Seo`
 
 ## Installing the application in Django
 
