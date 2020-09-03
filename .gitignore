@@ -1,1 +1,8 @@
 *.pyc
+Pipfile.lock
+
+# Build
+Checklist_Seo.egg-info
+dist
+.pypirc
+build

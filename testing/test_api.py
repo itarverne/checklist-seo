@@ -3,7 +3,7 @@ import json
 import os
 
 
-class TestViews:
+class TestApi:
 
     # frequency tests
 

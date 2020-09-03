@@ -2,6 +2,7 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/1ea9094958cb77a0c1a9/maintainability)](https://codeclimate.com/github/itarverne/checklist-seo/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/1ea9094958cb77a0c1a9/test_coverage)](https://codeclimate.com/github/itarverne/checklist-seo/test_coverage)
+[![PyPI version](https://badge.fury.io/py/Checklist-Seo.svg)](https://badge.fury.io/py/Checklist-Seo)
 
 # Features
 
