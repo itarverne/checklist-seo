@@ -6,8 +6,8 @@ with open('README.md', encoding='utf-8') as file:
   long_description = file.read()
 
 setup(
-    name='Checklist-Seo',
-    version='0.0.1',
+    name='checklist-seo',
+    version='0.0.2',
     license='MIT',
     author='RIGAUDIE David',
     url='https://github.com/itarverne/checklist-seo',
