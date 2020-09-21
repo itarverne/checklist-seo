@@ -45,7 +45,7 @@ The module contains a model in models/SeoPage, the model need to be used as a ba
 
 Example of your model:
 
-``` 
+```python
 class HomePage(SeoPage):
     date = models.DateField("Post date")
     intro = models.CharField(max_length=250)
@@ -114,7 +114,7 @@ class HomePage(SeoPage):
 ## Routing
 
 In your routing projet file `urls.py`
-```
+```python
 from django.conf.urls import url
 from django.urls import include
 
