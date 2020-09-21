@@ -7,7 +7,7 @@ with open('README.md', encoding='utf-8') as file:
 
 setup(
     name='checklist-seo',
-    version='0.0.3',
+    version='0.0.4',
     license='MIT',
     author='RIGAUDIE David',
     url='https://github.com/itarverne/checklist-seo',

@@ -17,9 +17,9 @@
 
 ## Pypi
 
-[![PyPI version](https://badge.fury.io/py/Checklist-Seo.svg)](https://badge.fury.io/py/Checklist-Seo)
+[![PyPI version](https://img.shields.io/pypi/v/checklist-seo)](https://img.shields.io/pypi/v/checklist-seo)
 
-`pip install Checklist-Seo`
+`pip install checklist-seo`
 
 ## Installing the application in Django
 
