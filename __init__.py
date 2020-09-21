@@ -1,1 +1,1 @@
-default_app_config = 'apps.SeoConfig'
+default_app_config = 'seo.apps.SeoConfig'

@@ -7,17 +7,17 @@ with open('README.md', encoding='utf-8') as file:
 
 setup(
     name='checklist-seo',
-    version='0.0.5',
+    version='0.0.6',
     license='MIT',
     author='RIGAUDIE David',
     url='https://github.com/itarverne/checklist-seo',
     description='The full checklist to provide tools inside Django in order to write right content',
     long_description=render(long_description),
-    packages=find_packages(exclude=["testing"]),
+    packages=find_packages(),
     long_description_content_type="text/markdown",
     platforms='any',
     python_requires='>=3.7',
-    install_requires=['Django>=3.1,<3.2'],
+    install_requires=['Django>=3.1,<3.2', 'nltk>=3.5', 'lxml>=4.5.2'],
     include_package_data=True,
     test_suite='testing.test_api',
     classifiers=[
