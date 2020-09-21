@@ -124,6 +124,11 @@ urlpatterns = [
 ]
 ```
 
+## Static
+
+To get the CSS / JS / Image file from this app to your projet
+`python manage.py collectstatic`
+
 ## DB Migration
 
 Now you can detect the change
