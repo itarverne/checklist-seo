@@ -1,1 +1,1 @@
-default_app_config = 'checklist-seo.apps.SeoConfig'
+default_app_config = 'apps.SeoConfig'
