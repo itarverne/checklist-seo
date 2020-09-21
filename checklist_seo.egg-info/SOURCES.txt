@@ -1,0 +1,10 @@
+README.md
+setup.py
+checklist_seo.egg-info/PKG-INFO
+checklist_seo.egg-info/SOURCES.txt
+checklist_seo.egg-info/dependency_links.txt
+checklist_seo.egg-info/requires.txt
+checklist_seo.egg-info/top_level.txt
+migrations/__init__.py
+models/__init__.py
+models/seo_page.py

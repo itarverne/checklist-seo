@@ -7,7 +7,7 @@ with open('README.md', encoding='utf-8') as file:
 
 setup(
     name='checklist-seo',
-    version='0.0.2',
+    version='0.0.3',
     license='MIT',
     author='RIGAUDIE David',
     url='https://github.com/itarverne/checklist-seo',
@@ -18,6 +18,7 @@ setup(
     platforms='any',
     python_requires='>=3.7',
     install_requires=['Django>=3.1,<3.2'],
+    include_package_data=True,
     test_suite='testing.test_api',
     classifiers=[
         'Development Status :: 4 - Beta',
