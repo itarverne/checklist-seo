@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: checklist-seo
-Version: 0.0.4
+Version: 0.0.5
 Summary: The full checklist to provide tools inside Django in order to write right content
 Home-page: https://github.com/itarverne/checklist-seo
 Author: RIGAUDIE David
@@ -19,8 +19,8 @@ Description: <h1>Check list SEO <img alt="Build" src="https://travis-ci.org/itar
         </ul>
         <h1>Installation</h1>
         <h2>Pypi</h2>
-        <p><a href="https://badge.fury.io/py/Checklist-Seo" rel="nofollow"><img alt="PyPI version" src="https://badge.fury.io/py/Checklist-Seo.svg"></a></p>
-        <p><code>pip install Checklist-Seo</code></p>
+        <p><a href="https://img.shields.io/pypi/v/checklist-seo" rel="nofollow"><img alt="PyPI version" src="https://img.shields.io/pypi/v/checklist-seo"></a></p>
+        <p><code>pip install checklist-seo</code></p>
         <h2>Installing the application in Django</h2>
         <p>To use this application, you need first to add it to your config file.</p>
         <p>In your config file (ex: settings.py):</p>

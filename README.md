@@ -17,7 +17,7 @@
 
 ## Pypi
 
-[![PyPI version](https://img.shields.io/pypi/v/checklist-seo)](https://img.shields.io/pypi/v/checklist-seo)
+[![PyPI version](https://img.shields.io/pypi/v/checklist-seo)](https://pypi.org/project/checklist-seo/)
 
 `pip install checklist-seo`
 
