@@ -4,8 +4,9 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/1ea9094958cb77a0c1a9/maintainability)](https://codeclimate.com/github/itarverne/checklist-seo/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/1ea9094958cb77a0c1a9/test_coverage)](https://codeclimate.com/github/itarverne/checklist-seo/test_coverage)
 
-![](./seo/static/images/seo_logo.png)
 All the SEO check in app Django built for Wagtail
+
+![](./seo/static/images/seo_logo.png)
 
 # Features
 
