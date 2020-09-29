@@ -2,7 +2,8 @@
 Pipfile.lock
 
 # Build
-Checklist_Seo.egg-info
+checklist_seo.egg-info/*
 dist
 .pypirc
 build
+.vscode/settings.json

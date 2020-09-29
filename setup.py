@@ -7,7 +7,7 @@ with open('README.md', encoding='utf-8') as file:
 
 setup(
     name='checklist-seo',
-    version='0.0.6',
+    version='0.0.7',
     license='MIT',
     author='RIGAUDIE David',
     url='https://github.com/itarverne/checklist-seo',
@@ -19,6 +19,7 @@ setup(
     python_requires='>=3.7',
     install_requires=['Django>=3.1,<3.2', 'nltk>=3.5', 'lxml>=4.5.2'],
     include_package_data=True,
+    package_data={'seo': ['static/js/helper.js', 'static/js/seoSidePannel.js', 'static/images/seo_logo.png', 'static/css/seo.css']},
     test_suite='testing.test_api',
     classifiers=[
         'Development Status :: 4 - Beta',
