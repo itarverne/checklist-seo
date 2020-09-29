@@ -1,6 +1,6 @@
 # Check list SEO ![Build](https://travis-ci.org/itarverne/checklist-seo.svg?branch=master) 
 
-![](./static/images/seo_logo.png)
+![](./seo/static/images/seo_logo.png)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/1ea9094958cb77a0c1a9/maintainability)](https://codeclimate.com/github/itarverne/checklist-seo/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/1ea9094958cb77a0c1a9/test_coverage)](https://codeclimate.com/github/itarverne/checklist-seo/test_coverage)
