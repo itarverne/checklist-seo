@@ -1,5 +1,7 @@
 # Check list SEO ![Build](https://travis-ci.org/itarverne/checklist-seo.svg?branch=master) 
 
+All the SEO check in app Django built for Wagtail
+
 ![](./static/images/seo_logo.png)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/1ea9094958cb77a0c1a9/maintainability)](https://codeclimate.com/github/itarverne/checklist-seo/maintainability)
@@ -7,11 +9,32 @@
 
 # Features
 
-- Keyword repartition
-- Length content 
-- Check title article length
-- Url is optimized
-- Number internal Links 
+<table>
+    <thead>
+        <tr>
+            <th>Result</th>
+            <th>Features</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=5><img src="./seo/static/images/seo_panel.png" /></td>
+	        <td>Keyword repartition</td>
+	    </tr>
+	    <tr>
+            <td>Length content </td>
+	    </tr>
+	    <tr>
+            <td>Check title article length</td>
+	    </tr>
+	    <tr>
+            <td>Url is optimized</td>
+	    </tr>
+	    <tr>
+            <td>Number internal Links</td>
+	    </tr>
+    </tbody>
+</table>
 
 # Installation
 
@@ -37,9 +60,9 @@ INSTALLED_APPS = [
 ]
 ```
 
-## SEO Pannel
+## SEO Panel
 
-To setup the keyword for SEO, you need to add a special SEO Pannel that will appear in your page creation in wagtail admin.
+To setup the keyword for SEO, you need to add a special SEO Panel that will appear in your page creation in wagtail admin.
 
 The module contains a model in models/SeoPage, the model need to be used as a base for your page models.
 
