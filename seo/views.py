@@ -175,3 +175,18 @@ def check_title_in_article(request):
                 return JsonResponse({"response": "H1_PRESENT"})
             return JsonResponse({"response": "NO_H1_PRESENT"})
     return ERROR_JSON
+
+@csrf_protect
+def check_title_h2_and_h3(request):
+    """Check there are h2 before h3 in the content of the article"""
+    if request.is_ajax():
+        if request.method == 'POST':
+            text = json.loads(request.body.decode('utf-8'))
+            if not text:
+                return ERROR_JSON
+            if (text.find('<h2') = 1):
+                and ((text.find('<h3') = 2)),
+
+                return JsonResponse({"response": "H2_ AND_ H3_PRESENT"})
+            return JsonResponse({"response": "NO_H2_AND_ H3_PRESENT"})
+    return ERROR_JSON
