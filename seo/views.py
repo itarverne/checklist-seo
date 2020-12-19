@@ -175,3 +175,49 @@ def check_title_in_article(request):
                 return JsonResponse({"response": "H1_PRESENT"})
             return JsonResponse({"response": "NO_H1_PRESENT"})
     return ERROR_JSON
+    
+@csrf_protect
+def check_order_subtitle_in_article(request):
+    """ 1 -> Check if h2 is in the content of the article
+        2 -> Check if h3 is in the content of the article
+        3 -> Find the fist h3 in the content of the article
+        4 -> Check if they are not h2 after the first h3 in the content of the article"""
+    if request.is_ajax():
+        if request.method == 'POST':
+            text = json.loads(request.body.decode('utf-8'))
+            if not text:
+                return ERROR_JSON
+                checkHTwo = check_balise_HTwo_in_article(text)
+                checkHThree = check_balise_HThree_in_article(text)
+                if (checkHTwo==0):
+                    return JsonResponse({"response":"NO_H2-PRESENT"})
+                    if (checkHThree==0):
+                        return JsonResponse({"response":"NO_H3-PRESENT"})
+                        if check_order_subtitle(text) = 1:
+                            return JsonResponse({"response":"GOOD-SUBTITLE_ORDER"})
+                        return JsonResponse({"response":"BAD-SUBTITLE_ORDER"})
+
+    return ERROR_JSON
+
+@csrf_protect
+def check_order_subtitle(text):
+    posiHThree = text.find("<h3")
+    if text.find("<h2", posiHThree) !=-1:
+        return 1
+    return 0
+
+@csrf_protect
+def check_balise_HTwo_in_article(text):
+    """Check if h2 is in the text """
+        if request.method == 'POST':
+            if (text.find('<h2') != -1):
+                return 1
+            return 0
+
+@csrf_protect
+def check_balise_HThree_in_article(text):
+        """Check if h3 is in the text """
+        if request.method == 'POST':
+            if (text.find('<h3') != -1):
+                return 1
+            return 0

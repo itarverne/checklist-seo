@@ -11,4 +11,5 @@ urlpatterns = [
     url('slug/', views.check_slug),
     url('internal_links/', views.check_internal_links),
     url('title_in_article/', views.check_title_in_article),
+    url('order_subtitles/', check_order_subtitle_in_article)
 ]
