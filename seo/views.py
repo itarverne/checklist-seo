@@ -66,7 +66,7 @@ def frequency(request):
                     frequencies.append(word)
             return JsonResponse(frequencies, safe=False)
     return ERROR_JSON
-
+@csrf_protect
 
 @csrf_protect
 def article_length(request):
@@ -175,7 +175,7 @@ def check_title_in_article(request):
                 return JsonResponse({"response": "H1_PRESENT"})
             return JsonResponse({"response": "NO_H1_PRESENT"})
     return ERROR_JSON
-    
+
 @csrf_protect
 def check_order_subtitle_in_article(request):
     """ 1 -> Check if h2 is in the content of the article

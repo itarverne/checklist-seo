@@ -248,3 +248,50 @@ class TestApi:
                                  data=payload,
                                  headers={'X-Requested-With': 'XMLHttpRequest'})
         assert response.content == b'{"response": "H1_PRESENT"}'
+
+    # check_order_subtitle_in_article tests
+
+     def test_check_order_subtitle_in_article_not_ajax(self):
+        response = requests.post(f"http://{os.environ.get('BASE_URL')}:8000/seo/title_in_article/")
+        assert response.content == b'{"error": "Request wrong formatted"}'
+
+    def test_order_subtitle_in_article_not_post(self):
+        response = requests.get(f"http://{os.environ.get('BASE_URL')}:8000/seo/title_in_article/", headers={'X-Requested-With': 'XMLHttpRequest'})
+        assert response.content == b'{"error": "Request wrong formatted"}'
+
+    def test_order_subtitle_in_article_no_data(self):
+        payload = json.dumps("")
+        response = requests.post(f"http://{os.environ.get('BASE_URL')}:8000/seo/title_in_article/", data=payload, headers={'X-Requested-With': 'XMLHttpRequest'})
+        assert response.content == b'{"error": "Request wrong formatted"}'
+
+    def test_order_subtitle_in_article_no_htwo(self):
+        payload = json.dumps('<span data-offset-key="61sd6 - 0 - 0"><span data-text="true">eeiua '
+                             + '</span></span><h1>primary title</h1>')
+        response = requests.post(f"http://{os.environ.get('BASE_URL')}:8000/seo/title_in_article/",
+                                 data=payload,
+                                 headers={'X-Requested-With': 'XMLHttpRequest'})
+        assert response.content == b'{"response": "NO_H2-PRESENT"}'
+
+    def test_order_subtitle_in_article_no_hthree(self):
+        payload = json.dumps('<span data-offset-key="61sd6 - 0 - 0"><span data-text="true">eeiua '
+                             + '</span></span><h1>primary title</h1><h2>secondary title</h2>')
+        response = requests.post(f"http://{os.environ.get('BASE_URL')}:8000/seo/title_in_article/",
+                                 data=payload,
+                                 headers={'X-Requested-With': 'XMLHttpRequest'})
+        assert response.content == b'{"response": "NO_H3-PRESENT"}'
+
+    def test_order_subtitle_in_article_wrong_order(self):
+        payload = json.dumps('<span data-offset-key="61sd6 - 0 - 0"><span data-text="true">eeiua '
+                             + '</span></span><h1>primary title</h1><h3>third title</h3><h2>secondary title</h2>')
+        response = requests.post(f"http://{os.environ.get('BASE_URL')}:8000/seo/title_in_article/",
+                                 data=payload,
+                                 headers={'X-Requested-With': 'XMLHttpRequest'})
+        assert response.content == b'{"response": "BAD-SUBTITLE_ORDER"}'
+
+    def test_order_subtitle_in_article_good_order(self):
+        payload = json.dumps('<span data-offset-key="61sd6 - 0 - 0"><span data-text="true">eeiua '
+                             + '</span></span><h1>primary title</h1><h3>third title</h3><h2>secondary title</h2>')
+        response = requests.post(f"http://{os.environ.get('BASE_URL')}:8000/seo/title_in_article/",
+                                 data=payload,
+                                 headers={'X-Requested-With': 'XMLHttpRequest'})
+        assert response.content == b'{"response": "GOOD-SUBTITLE_ORDER"}'
