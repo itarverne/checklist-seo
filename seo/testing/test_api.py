@@ -249,9 +249,9 @@ class TestApi:
                                  headers={'X-Requested-With': 'XMLHttpRequest'})
         assert response.content == b'{"response": "H1_PRESENT"}'
 
-    # check_order_subtitle_in_article tests
-
-     def test_check_order_subtitle_in_article_not_ajax(self):
+    # check_order_subtitle_in_article tests 
+    
+    def test_check_order_subtitle_in_article_not_ajax(self):
         response = requests.post(f"http://{os.environ.get('BASE_URL')}:8000/seo/order_subtitles/")
         assert response.content == b'{"error": "Request wrong formatted"}'
 

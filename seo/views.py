@@ -66,7 +66,6 @@ def frequency(request):
                     frequencies.append(word)
             return JsonResponse(frequencies, safe=False)
     return ERROR_JSON
-@csrf_protect
 
 @csrf_protect
 def article_length(request):
@@ -209,15 +208,13 @@ def check_order_subtitle(text):
 @csrf_protect
 def check_balise_HTwo_in_article(text):
     """Check if h2 is in the text """
-        if request.method == 'POST':
-            if (text.find('<h2') != -1):
-                return 1
-            return 0
+    if (text.find('<h2') != -1):
+        return 1
+    return 0
 
 @csrf_protect
 def check_balise_HThree_in_article(text):
-        """Check if h3 is in the text """
-        if request.method == 'POST':
-            if (text.find('<h3') != -1):
-                return 1
-            return 0
+    """Check if h3 is in the text """
+    if (text.find('<h3') != -1):
+        return 1
+    return 0
