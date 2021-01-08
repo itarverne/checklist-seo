@@ -248,3 +248,36 @@ class TestApi:
                                  data=payload,
                                  headers={'X-Requested-With': 'XMLHttpRequest'})
         assert response.content == b'{"response": "H1_PRESENT"}'
+
+
+ # check_h2_h3_in_article tests
+
+    def test_check_h2_h3_in_article_not_ajax(self):
+        response = requests.post(f"http://{os.environ.get('BASE_URL')}:8000/seo/h2_h3_in_article/")
+        assert response.content == b'{"error": "Request wrong formatted"}'
+
+    def test_check_h2_h3_in_article_not_post(self):
+        response = requests.get(f"http://{os.environ.get('BASE_URL')}:8000/seo/h2_h3_in_article/", headers={'X-Requested-With': 'XMLHttpRequest'})
+        assert response.content == b'{"error": "Request wrong formatted"}'
+
+    def test_check_h2_h3_in_article_no_data(self):
+        payload = json.dumps("")
+        response = requests.post(f"http://{os.environ.get('BASE_URL')}:8000/seo/h2_h3_in_article/", data=payload, headers={'X-Requested-With': 'XMLHttpRequest'})
+        assert response.content == b'{"error": "Request wrong formatted"}'
+
+    def test_check_h2_h3_in_article_valid(self):
+        payload = json.dumps('<span data-offset-key="61sd6 - 0 - 0"><span data-text="true">eeiua  '
+                             + '</span></span><div>bonjour</div><h1>')
+        response = requests.post(f"http://{os.environ.get('BASE_URL')}:8000/seo/h2_h3_in_article/",
+                                 data=payload,
+                                 headers={'X-Requested-With': 'XMLHttpRequest'})
+        assert response.content == b'{"response": "NO_H2_PRESENT"}'
+
+    def test_check_h2_h3_in_article_invalid(self):
+        payload = json.dumps('<span data-offset-key="61sd6 - 0 - 0"><span data-text="true">eeiua '
+                             + '</span></span><h2>secondary title</h2><h1>primary title</h1>')
+        response = requests.post(f"http://{os.environ.get('BASE_URL')}:8000/seo/title_in_article/",
+                                 data=payload,
+                                 headers={'X-Requested-With': 'XMLHttpRequest'})
+        assert response.content == b'{"response": "H2_PRESENT"}'
+
