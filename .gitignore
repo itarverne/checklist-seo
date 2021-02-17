@@ -1,9 +1,1 @@
-*.pyc
-Pipfile.lock
-
-# Build
-checklist_seo.egg-info/*
-dist
-.pypirc
-build
-.vscode/settings.json
+.venv
